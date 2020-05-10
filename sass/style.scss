@@ -21,7 +21,7 @@ body {
     background-color: #dbe0da;
     color: #3d423b;
     margin-bottom: 20px;
-    height: calc(100vh - 10px);
+    height: 95vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -36,6 +36,10 @@ body {
         font-size: 30px;
         color: #3d423b;
         z-index: 3;
+
+        @include laptop {
+            display: none;
+        }
     }
 
     .navbar {
@@ -94,16 +98,15 @@ body {
 
     }
 
-    .logo {
-        display: none;
-    }
-
+    .logo,
     .btn {
         display: none;
+
+        // @include tablet {
+        //     display: block;
+        // }
+
     }
-
-
-
 
     img {
         position: absolute;
@@ -174,15 +177,37 @@ section {
         padding-right: 100px;
     }
 
+    @include laptop {
+        padding: 60px 40px 40px;
+    }
+
+    .articles-wrapper {
+        @include laptop {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+
+
     .card {
 
         margin-bottom: 20px;
+
+        @include laptop {
+            flex-basis: 32%;
+            border: 1px solid #fff;
+        }
 
         .card-image {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             height: 220px;
+
+            @include laptop {
+                height: 340px;
+            }
         }
 
         .card-text {
@@ -197,6 +222,12 @@ section {
             justify-content: center;
             position: relative;
 
+            @include laptop {
+                font-size: 1.5rem;
+                padding-top: 40px;
+                height: 340px;
+            }
+
             &::after {
                 content: "";
                 width: 40px;
@@ -206,6 +237,10 @@ section {
                 top: 20%;
                 left: 50%;
                 transform: translateX(-50%);
+
+                @include laptop {
+                    top: 30%;
+                }
             }
         }
     }
@@ -263,6 +298,10 @@ section {
             flex-basis: 50%;
             padding: 20px 40px;
         }
+
+        @include laptop {
+            padding: 20px 60px;
+        }
     }
 }
 
@@ -296,13 +335,19 @@ section {
         display: flex;
         flex-direction: column;
 
+        @include laptop {
+            width: 400px;
+            margin: 0 auto;
+        }
+
         input {
             font-size: 1rem;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             border: none;
             padding: 14px 8px;
             background-color: #eff1ee;
             color: #3d423b;
+            font-family: 'Jost', sans-serif;
         }
 
         .submit-btn {
@@ -312,6 +357,15 @@ section {
             border: 1px solid #3d423b;
             text-transform: uppercase;
             letter-spacing: 2px;
+
+            &:hover {
+                border-color: #fff;
+            }
+
+            @include laptop {
+                width: 150px;
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -321,12 +375,24 @@ section {
 .footer {
     padding: 60px 0 40px;
 
+    @include laptop {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 40px 40px;
+    }
+
     .footer-nav {
         text-align: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 20px;
+
+        @include laptop {
+            flex-wrap: nowrap;
+            order: 2;
+
+        }
 
         a {
             flex-basis: 60%;
@@ -337,7 +403,16 @@ section {
             margin-bottom: 5px;
             letter-spacing: 2px;
             font-weight: 700;
+            transition: .3s;
 
+            &:hover {
+                background-color: #3d423b;
+                color: #dfe4de;
+            }
+
+            @include laptop {
+                flex-basis: auto;
+            }
 
         }
     }
@@ -347,6 +422,13 @@ section {
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+
+        @include laptop {
+            margin-left: 0;
+        }
+
+
+
 
         .link {
             height: 40px;

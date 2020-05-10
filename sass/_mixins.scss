@@ -3,3 +3,13 @@
         @content;
     }
 }
+
+;
+
+@mixin laptop {
+    @media (min-width:1024px) {
+        @content;
+    }
+}
+
+;

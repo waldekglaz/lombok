@@ -18,7 +18,7 @@ body {
   background-color: #dbe0da;
   color: #3d423b;
   margin-bottom: 20px;
-  height: calc(100vh - 10px);
+  height: 95vh;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,6 +41,12 @@ body {
   font-size: 30px;
   color: #3d423b;
   z-index: 3;
+}
+
+@media (min-width: 1024px) {
+  .showcase .hamburger {
+    display: none;
+  }
 }
 
 .showcase .navbar nav {
@@ -103,10 +109,7 @@ body {
           transform: translateY(0);
 }
 
-.showcase .logo {
-  display: none;
-}
-
+.showcase .logo,
 .showcase .btn {
   display: none;
 }
@@ -177,8 +180,33 @@ section .section-title::before {
   }
 }
 
+@media (min-width: 1024px) {
+  .articles {
+    padding: 60px 40px 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .articles .articles-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .articles .card {
   margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+  .articles .card {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+    border: 1px solid #fff;
+  }
 }
 
 .articles .card .card-image {
@@ -186,6 +214,12 @@ section .section-title::before {
   background-position: center;
   background-repeat: no-repeat;
   height: 220px;
+}
+
+@media (min-width: 1024px) {
+  .articles .card .card-image {
+    height: 340px;
+  }
 }
 
 .articles .card .card-text {
@@ -208,6 +242,14 @@ section .section-title::before {
   position: relative;
 }
 
+@media (min-width: 1024px) {
+  .articles .card .card-text {
+    font-size: 1.5rem;
+    padding-top: 40px;
+    height: 340px;
+  }
+}
+
 .articles .card .card-text::after {
   content: "";
   width: 40px;
@@ -218,6 +260,12 @@ section .section-title::before {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (min-width: 1024px) {
+  .articles .card .card-text::after {
+    top: 30%;
+  }
 }
 
 .articles .card-1 .card-image {
@@ -281,6 +329,12 @@ section .section-title::before {
   }
 }
 
+@media (min-width: 1024px) {
+  .about .about-text {
+    padding: 20px 60px;
+  }
+}
+
 .subscribe {
   padding: 60px 0 80px;
   background-color: #dfe4de;
@@ -318,13 +372,21 @@ section .section-title::before {
           flex-direction: column;
 }
 
+@media (min-width: 1024px) {
+  .subscribe form {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+
 .subscribe form input {
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border: none;
   padding: 14px 8px;
   background-color: #eff1ee;
   color: #3d423b;
+  font-family: 'Jost', sans-serif;
 }
 
 .subscribe form .submit-btn {
@@ -336,8 +398,31 @@ section .section-title::before {
   letter-spacing: 2px;
 }
 
+.subscribe form .submit-btn:hover {
+  border-color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .subscribe form .submit-btn {
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+
 .footer {
   padding: 60px 0 40px;
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 60px 40px 40px;
+  }
 }
 
 .footer .footer-nav {
@@ -353,6 +438,16 @@ section .section-title::before {
   margin-bottom: 20px;
 }
 
+@media (min-width: 1024px) {
+  .footer .footer-nav {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .footer .footer-nav a {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
@@ -363,6 +458,20 @@ section .section-title::before {
   margin-bottom: 5px;
   letter-spacing: 2px;
   font-weight: 700;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.footer .footer-nav a:hover {
+  background-color: #3d423b;
+  color: #dfe4de;
+}
+
+@media (min-width: 1024px) {
+  .footer .footer-nav a {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
 }
 
 .footer .social-links {
@@ -374,6 +483,12 @@ section .section-title::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .footer .social-links {
+    margin-left: 0;
+  }
 }
 
 .footer .social-links .link {
