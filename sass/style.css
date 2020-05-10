@@ -93,6 +93,9 @@ body {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .showcase .navbar nav.active {
@@ -167,6 +170,13 @@ section .section-title::before {
   padding: 60px 0 40px;
 }
 
+@media (min-width: 768px) {
+  .articles {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
 .articles .card {
   margin-bottom: 20px;
 }
@@ -226,6 +236,18 @@ section .section-title::before {
   padding-bottom: 40px;
 }
 
+@media (min-width: 768px) {
+  .about .about-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 0;
+  }
+}
+
 .about .about-img {
   height: 220px;
   background-image: url(../img/aboutMobile.jpg);
@@ -235,6 +257,15 @@ section .section-title::before {
   margin-bottom: 60px;
 }
 
+@media (min-width: 768px) {
+  .about .about-img {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    height: 500px;
+    margin-bottom: 0;
+  }
+}
+
 .about .about-text {
   line-height: 1.5;
   padding: 0 10px;
@@ -242,10 +273,25 @@ section .section-title::before {
   font-size: 18px;
 }
 
+@media (min-width: 768px) {
+  .about .about-text {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding: 20px 40px;
+  }
+}
+
 .subscribe {
   padding: 60px 0 80px;
   background-color: #dfe4de;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .subscribe {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 .subscribe .section-title {
