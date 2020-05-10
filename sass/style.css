@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+.hamburger {
+  position: absolute;
+  top: 2%;
+  right: 7%;
+  font-size: 30px;
+  color: #3d423b;
+  z-index: 2;
+}
+
+.showcase {
+  position: relative;
+  background-color: #dbe0da;
+  color: #3d423b;
+  margin: 8px;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.showcase .navbar {
+  display: none;
+}
+
+.showcase img {
+  position: absolute;
+  top: -15%;
+  left: -20%;
+  z-index: -1;
+}
+
+.showcase .showcase-heading {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.showcase .showcase-sub-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.showcase .showcase-sub-title::before {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #3d423b;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+/*# sourceMappingURL=style.css.map */
