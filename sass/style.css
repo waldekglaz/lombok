@@ -11,18 +11,22 @@ body {
 
 .hamburger {
   position: absolute;
-  top: 2%;
+  top: 4%;
   right: 7%;
   font-size: 30px;
   color: #3d423b;
   z-index: 2;
 }
 
+.container {
+  margin: 10px;
+}
+
 .showcase {
   position: relative;
   background-color: #dbe0da;
   color: #3d423b;
-  margin: 8px;
+  margin-bottom: 20px;
   height: 100vh;
   overflow: hidden;
   display: -webkit-box;
@@ -66,13 +70,162 @@ body {
 
 .showcase .showcase-sub-title::before {
   content: "";
-  width: 80px;
-  height: 4px;
+  width: 60px;
+  height: 6px;
   background-color: #3d423b;
   position: absolute;
   bottom: -20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+section .section-title {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+
+section .section-title::before {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #3d423b;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.articles {
+  background-color: #f2f4f1;
+  padding: 60px 0 40px;
+}
+
+.articles .card {
+  margin-bottom: 20px;
+}
+
+.articles .card .card-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+}
+
+.articles .card .card-text {
+  background-color: #fff;
+  text-align: center;
+  height: 220px;
+  padding: 20px;
+  font-size: 2rem;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.articles .card .card-text::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #3d423b;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.articles .card-1 .card-image {
+  background-image: url(../img/plantMobile.jpg);
+}
+
+.articles .card-2 .card-image {
+  background-image: url(../img/plant1Mobile.jpg);
+}
+
+.articles .card-3 .card-image {
+  background-image: url(../img/walkMobile.jpg);
+}
+
+.about .about-wrapper {
+  padding-bottom: 40px;
+}
+
+.about .about-img {
+  height: 220px;
+  background-image: url(../img/aboutMobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 60px;
+}
+
+.about .about-text {
+  line-height: 1.5;
+  padding: 0 10px;
+  text-align: justify;
+  font-size: 18px;
+}
+
+.subscribe {
+  padding: 60px 0 80px;
+  background-color: #dfe4de;
+  text-align: center;
+}
+
+.subscribe .section-title {
+  margin-bottom: 5px;
+}
+
+.subscribe .section-title::before {
+  display: none;
+}
+
+.subscribe .subscribe-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.subscribe form {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.subscribe form input {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border: none;
+  padding: 14px 8px;
+  background-color: #eff1ee;
+  color: #3d423b;
+}
+
+.subscribe form .submit-btn {
+  font-size: 1.5rem;
+  padding: 8px;
+  background-color: #dfe4de;
+  border: 1px solid #3d423b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 /*# sourceMappingURL=style.css.map */
