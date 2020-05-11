@@ -13,3 +13,19 @@
 }
 
 ;
+
+@mixin desktop {
+    @media (min-width:1440px) {
+        @content;
+    }
+}
+
+;
+
+@mixin min-4k {
+    @media (min-width:2540px) {
+        @content;
+    }
+}
+
+;
