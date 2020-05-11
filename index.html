@@ -7,6 +7,7 @@
     <title>Lombok</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Jost:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="sass/style.css">
 </head>
 
@@ -37,7 +38,7 @@
     </div>
     <section class="section articles">
         <h2 class="section-title">latest articles</h2>
-        <div class="articles-wrapper container">
+        <div data-aos="fade-in" data-aos-delay="100" class="articles-wrapper container">
             <div class="card card-1">
                 <div class="card-image"></div>
                 <div class="card-text">10 best plants for social anxiety</div>
@@ -88,6 +89,10 @@
         </div>
     </footer>
     <script src="hamburger.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
